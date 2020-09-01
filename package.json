@@ -5,6 +5,16 @@
   "main": "dist/index.js",
   "module": "index.js",
   "types": "index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jesseyx/webrtc-audio-fix"
+  },
+  "keywords": [
+    "WebRTC",
+    "audio",
+    "bug",
+    "multiple tabs"
+  ],
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack",
     "lint": "eslint index.js",
