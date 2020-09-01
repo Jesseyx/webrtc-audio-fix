@@ -3,9 +3,10 @@ declare class Fix {
   destroy();
 }
 
-declare var WebRTCAudioFix: {
-  createFix(mediaStream: MediaStream): Fix,
-  setChannelLocalStorageKey(key: string),
-};
+declare namespace WebRTCAudioFix {
+  export function createFix(mediaStream: MediaStream): Fix;
+  export function setChannelLocalStorageKey(key: string);
+}
 
-export default WebRTCAudioFix;
+export = WebRTCAudioFix;
+export as namespace WebRTCAudioFix;
