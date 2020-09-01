@@ -1,0 +1,32 @@
+{
+  "name": "webrtc-audio-fix",
+  "version": "1.0.0",
+  "description": "Fix Chrome WebRTC audio track bug",
+  "main": "dist/index.js",
+  "module": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production webpack",
+    "lint": "eslint index.js",
+    "lint-fix": "eslint index.js --fix"
+  },
+  "author": "Jesseyx",
+  "license": "MIT",
+  "dependencies": {
+    "eventemitter3": "^4.0.7",
+    "global": "^4.4.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.4",
+    "@babel/preset-env": "^7.11.0",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.1.0",
+    "cross-env": "^7.0.2",
+    "eslint": "^7.7.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-import-resolver-webpack": "^0.12.2",
+    "eslint-plugin-import": "^2.22.0",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  }
+}
