@@ -1,6 +1,6 @@
 {
   "name": "webrtc-audio-fix",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Fix Chrome WebRTC audio track bug",
   "main": "dist/index.js",
   "module": "index.js",
