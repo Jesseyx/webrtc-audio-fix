@@ -10,8 +10,8 @@ Bug detail see: [https://bugs.chromium.org/p/chromium/issues/detail?id=987548](h
 # import package
 import { createFix } from 'webrtc-audio-fix';
 
-# Give your MediaStream
-const fix = createFix(mediaStream);
+# Give your MediaStream and video element
+const fix = createFix(mediaStream, videoElement);
 
 # Delete when not needed
 fix.destroy();

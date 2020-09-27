@@ -122,8 +122,13 @@ if (isSupport()) {
 }
 
 class Fix {
-  constructor(mediaStream) {
+  constructor(mediaStream, video) {
+    if (!video) {
+      console.error('You must provide video element');
+      return;
+    }
     this._mediaStream = mediaStream;
+    this._video = video;
     const audioTracks = mediaStream.getAudioTracks();
     this._audioTrack = audioTracks[0] || null;
 
@@ -136,6 +141,7 @@ class Fix {
   }
 
   _handleActive() {
+    if (this._video.paused) return;
     const cpAudioTrack = this._audioTrack.clone();
     this._mediaStream.addTrack(cpAudioTrack);
     this._mediaStream.removeTrack(this._audioTrack);
@@ -153,6 +159,7 @@ class Fix {
     }
 
     this._mediaStream = null;
+    this._video = null;
     this._audioTrack = null;
   }
 }
